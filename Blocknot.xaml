@@ -1,0 +1,51 @@
+﻿<Window x:Class="NikitaNikita23.Blocknot"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:NikitaNikita23"
+         
+        mc:Ignorable="d"
+        Title="Blocknot" Height="450" Width="800">
+    <Grid>
+
+        <DataGrid Background="{x:Null}" x:Name="dataUser" AutoGenerateColumns="False">
+            <DataGrid.Columns>
+                <DataGridTextColumn Header="Id" Binding="{Binding Id}" Width="*"/>
+                <DataGridTextColumn Header="Фамилия" Binding="{Binding  LName}" Width="*"/>
+                <DataGridTextColumn Header="Имя" Binding="{Binding  Name}" Width="*"/>
+                <DataGridTextColumn Header="Возраст" Binding="{Binding  Age}" Width="*"/>
+                
+            </DataGrid.Columns>
+
+        </DataGrid>
+
+        <Button Grid.Row="2"
+                x:Name="ButtonExit"
+                Width="200"
+                Height="50"
+                Content="Exit"
+                FontSize="30"
+                Click="ButtonExit_Click"
+            >
+            <Button.Background>
+                <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                    <GradientStop Color="#FF1100F6" Offset="0"/>
+                    <GradientStop Color="#FF6200B0" Offset="1"/>
+                </LinearGradientBrush>
+            </Button.Background>
+        </Button>
+        <Grid.Background>
+            <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                <GradientStop Color="#FFFF0028" Offset="0"/>
+                <GradientStop Color="#FF0600FF" Offset="1"/>
+            </LinearGradientBrush>
+        </Grid.Background>
+       
+        <Grid.RowDefinitions>
+            <RowDefinition Height="9*"/>
+            <RowDefinition Height="2*"/>
+        </Grid.RowDefinitions>
+        
+    </Grid>
+</Window>
